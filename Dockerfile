@@ -20,6 +20,5 @@ RUN microdnf install --nodocs sudo java-11-openjdk-headless shadow-utils \
 
 EXPOSE 8080
 WORKDIR /opt/openhab
-VOLUME ["/opt/openhab"]
 
 ENTRYPOINT ["sudo", "-u", "openhab", "/usr/bin/bash", "-c", "/opt/openhab/start.sh"]
