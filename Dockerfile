@@ -11,12 +11,13 @@ RUN microdnf install --nodocs wget unzip tar shadow-utils \
 
 
 FROM registry.access.redhat.com/ubi8/ubi-minimal
-
-RUN microdnf install --nodocs java-11-openjdk-headless shadow-utils sudo \
- && mkdir -p /opt/openhab
  
 COPY --from=SRC /tmp/openhab.tar.gz /tmp/openhab.tar.gz
 COPY start.sh /usr/local/sbin/start.sh
+
+RUN microdnf install --nodocs java-11-openjdk-headless shadow-utils sudo \
+ && mkdir -p /opt/openhab \
+ && chmod +x /usr/local/sbin/start.sh
 
 EXPOSE 8080
 WORKDIR /opt/openhab
