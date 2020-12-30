@@ -6,7 +6,7 @@ RUN microdnf install --nodocs wget unzip tar gzip shadow-utils
 RUN wget -O /tmp/openhab-download.zip ${OPENHAB_SRC}                            
 RUN mkdir -p /opt/openhab                                                       
 RUN unzip /tmp/openhab-download.zip -d /opt/openhab                             
-RUN tar cafv /tmp/openhab.tar.gz -C /opt/openhab .*                             
+RUN tar cafv /tmp/openhab.tar.gz -C /opt/ openhab/                              
                                                                                 
                                                                                 
                                                                                 

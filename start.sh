@@ -3,7 +3,7 @@
 ## Copy openHAB content to working dir, if empty                                
 if [ -z "$(ls -A /opt/openhab)" ]; then                                         
   echo "Copy openHAB content to working directory..."                           
-  tar xafv /tmp/openhab.tar.gz -C /opt/openhab                                  
+  tar xafv /tmp/openhab.tar.gz -C /opt/                                         
 else                                                                            
   echo "Use existing data at openHAB working dir..."                            
 fi                                                                              
