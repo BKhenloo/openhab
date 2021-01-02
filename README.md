@@ -65,7 +65,7 @@ Then the systemd daemon must reload the service files.
 ```shell
 $ podman create --name <container_name> \
  -p [host]:8080 \
- -v [host]:/opt/picapport:Z \
+ -v <HOST>:/opt/openhab:Z \
  -l "io.containers.autoupdate=image" \
  -t briezh/openhab:latest
 
